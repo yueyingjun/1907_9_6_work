@@ -43,7 +43,28 @@ html{
     margin-top:0.37rem; 
     width: 100%;
     height: 1.2rem;
-    background: url(https://img.alicdn.com/imgextra/i3/156/O1CN01emULcw1D1UJWd9c6D_!!156-0-luban.jpg) no-repeat center / 100% 100%;
+    animation: lunbo ease-in-out  10s infinite;
+   
+}
+@keyframes lunbo{
+    0%{
+        background: url(https://img.alicdn.com/imgextra/i3/156/O1CN01emULcw1D1UJWd9c6D_!!156-0-luban.jpg) no-repeat center / 100% 100% ;
+    }
+    20%{
+        background: url(https://gw.alicdn.com/imgextra/i3/124/O1CN014VTCMF1CmpfXU7HgX_!!124-0-lubanu.jpg) no-repeat center /100% 100%;
+    }
+    40%{
+        background: url(https://gw.alicdn.com/imgextra/i2/30/O1CN014gH5Re1C5mRJ6IMKW_!!30-0-lubanu.jpg) no-repeat center / 100% 100%;
+    }
+    60%{
+        background: url(https://aecpm.alicdn.com/simba/img/TB14ab1KpXXXXclXFXXSutbFXXX.jpg_q50.jpg) no-repeat center / 100% 100%;
+    }
+    80%{
+        background: url(https://aecpm.alicdn.com/simba/img/TB14ab1KpXXXXclXFXXSutbFXXX.jpg_q50.jpg) no-repeat center / 100% 100%;
+    }
+    100%{
+        background: url(https://img.alicdn.com/imgextra/i3/156/O1CN01emULcw1D1UJWd9c6D_!!156-0-luban.jpg) no-repeat center /100% 100%;
+    }
 }
 .daohang{
     width: 100%;
