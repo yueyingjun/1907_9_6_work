@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘宝官网</title>
+    <style>
+        html{
+            font-size: 26.66666667vw;
+        }
+        body{
+            width: 100%;
+        }
+        .one{
+            background: #ff852a;
+            width: 100%;
+            height: 0.4rem;
+            position: absolute;
+            left: 0;top: 0;
+            padding: 0;
+        }
+        .one img{
+            width: 0.4rem;
+            height: 0.4rem;
+            position: absolute;
+            left: 0.1rem;
+        }
+        .bl{
+            width: 81%;
+            height: 0.25rem ;
+            background: #ff4e22;
+            position: absolute;
+            left: 0.6rem;top: 0.08rem;
+            border-radius:0.1rem 0.1rem  0.1rem 0.1rem; 
+        }
+        .gc{
+            font-size: 0.16rem;
+            position: absolute;
+            left: 0.9rem;top: 0.03rem;
+        }
+        .two{
+            width: 100%;
+            height: 1.5rem;
+            position: absolute;
+            left:0; top: 0.4rem;
+        }
+        .three{
+            width: 100%;
+            height: 1.5rem;
+            position: absolute;
+            left:0; top: 1.9rem;
+            background: #fafafa;
+            display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;
+        }
+        .three div{
+            width: 19%;
+            height: 50%;
+            display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;  
+        }
+        .three img{
+            border-radius:50%;  
+        }
+        .three span{
+            font-size: 0.05rem;
+        }
+        .four{
+            width: 100%;
+            height: 0.7rem;
+            position: absolute;
+            left:0; top: 3.4rem;
+            background: #fafafa;
+        }
+        .four-a{
+            float: left;
+            width: 20%;
+            height: 100%;
+            color: gray;
+            font-size: 0.28rem;
+            text-align: center;
+
+        }
+        .four-b{
+            float: left;
+            width: 52%;
+            height: 100%;
+        }
+        .four-b-1{
+            float: left;
+            width: 20%;
+            border: 1px solid orange;
+            border-radius:0.05rem 0.05rem  0.05rem  0.05rem ;
+            font-size: 0.08rem;
+            color: orange;
+            margin-top:0.15rem; 
+            text-align: center;
+        }
+        .four-b-2{
+            float: left;
+            width: 78%;
+            font-size: 0.08rem;
+            margin-top:0.15rem; 
+            text-align: center;
+        }
+        .four-b-3{
+            float: left;            
+            width: 20%;
+            border: 1px solid orange;
+            border-radius:0.05rem 0.05rem  0.05rem  0.05rem ;
+            font-size: 0.08rem;
+            color: orange;
+            margin-top:0.15rem; 
+            text-align: center;
+            margin-left:-0.377rem;
+        }
+        .four-b-4{
+            float: left;            
+            float: left;
+            width: 75%;
+            font-size: 0.08rem;
+            margin-top:0.15rem; 
+            text-align: center;
+        }
+        .four-c{
+            float: left;
+            width: 28%;
+            height: 100%;
+            display: flex;
+        }
+         .five{
+            width: 100%;
+            height: 1.8rem;
+            position: absolute;
+            left:0; top: 4.2rem;
+            background: #fafafa;
+            display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;
+        }
+        .five div{
+            width: 24%;
+            height: 50%;
+            display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;  
+        }
+        .five span{
+            font-size: 0.16rem;
+            color: deeppink;
+        }
+         .six{
+            width: 100%;
+            height: 1.3rem;
+            position: absolute;
+            left:0; top: 6.2rem;
+            background: #fafafa;
+        }
+        .six-a{
+            width: 63%;
+            height: 100%;
+            float: left;
+            display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;  
+        }
+         .six-b{
+            width: 35%;
+            height: 100%;
+            float: left;
+            display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;  
+        }
+        .seven{
+            width: 100%;
+            height: 1.8rem;
+            position: absolute;
+            left:0; top: 7.5rem;
+            background: #fafafa;
+            display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;
+        }
+        .seven div{
+            width: 32.1%;
+            height: 100%;
+            display: flex;
+             flex-wrap:wrap; 
+        }
+        .eight{
+            width: 100%;
+            height: 0.4rem;
+            position: absolute;
+            left:0; top: 9.3rem;
+            background: #fafafa;
+             display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;
+        }
+        .eight div{
+            float: left;
+            width: 50%;
+            height: 100%;
+             display: flex;
+             flex-wrap:wrap;
+             justify-content:space-around;
+             flex-direction:row;
+        }
+        .eight span{
+            width: 100%;
+            font-size: 0.10rem
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">
+             <img src="http://gw.alicdn.com/bao/uploaded/TB1FjNySpXXXXc8aXXXXXXXXXXX-200-200.png" alt="" >
+             <div class="bl">
+                 <div class="gc">寻找宝贝店铺</div>
+             </div>
+    </div>
+    <div class="two">
+        <img src="http://gw.alicdn.com/imgextra/i1/183/O1CN01DJOU9Q1DDr2IpGLld_!!183-0-lubanu.jpg" alt=""  width="100%" height="100%">
+    </div>
+    <div class="three">
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png_.webp" alt="" width="content" height="60%" >
+        <span>天猫</span>
+    </div>
+    <div>
+        <img src="https://img.alicdn.com/tfs/TB10UHQaNjaK1RjSZKzXXXVwXXa-183-144.png?getAvatar=1_.webp" alt="" width="content" height="60%" >
+        <span>聚划算</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB11rTqtj7nBKNjSZLeXXbxCFXa-183-144.png?getAvatar=1_.webp" alt="" width="content" height="60%" >
+        <span>天猫国际</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tps/TB1eXc7PFXXXXb4XpXXXXXXXXXX-183-144.png?getAvatar=1_.webp" alt="" width="content" height="60%" >
+        <span>外卖</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB1IKqDtpooBKNjSZFPXXXa2XXa-183-144.png_.webp" alt="" width="content" height="60%" >
+        <span>天猫超市</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB1o0FLtyMnBKNjSZFoXXbOSFXa-183-144.png_.webp" alt="" width="content" height="60%" >
+        <span>充值中心</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1_.webp" alt="" width="content" height="60%" >
+        <span>飞猪旅行</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB1BqystrZnBKNjSZFrXXaRLFXa-183-144.png?getAvatar=1_.webp" alt="" width="content" height="60%" >
+        <span>领金币</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB1CMf4tlnTBKNjSZPfXXbf1XXa-183-144.png?getAvatar=1_.webp" alt="" width="content" height="60%" >
+        <span>拍卖</span>
+    </div>
+    <div>
+        <img src="https://gw.alicdn.com/tfs/TB18P98tyQnBKNjSZFmXXcApVXa-183-144.png?getAvatar=1_.webp" alt="" width="content" height="60%" >
+        <span>分类</span>
+    </div>
+    </div>
+    <div class="four">
+        <div class="four-a">
+            <img src="https://gw.alicdn.com//tfs//TB1TBEMXU6FK1Jjy1XdXXblkXXa-105-107.png_.webp" alt="" width="90%" height="90%" >
+        </div>
+        <div class="four-b">
+            <div class="four-b-1">热门</div>
+            <div class="four-b-2">糖酥饼真香警告|食说...</div>
+            <div class="four-b-3">热门</div>
+            <div class="four-b-4">这道减肥菜，既开胃又...</div>
+        </div>
+        <div class="four-c">
+            <img src="https://f10.baidu.com/it/u=2722137271,510927532&fm=72" alt="" width="100%" height="100%" >
+        </div>
+    </div>
+    <div class="five">
+        <div>
+            <span>淘抢购</span>
+            <img src="https://gw.alicdn.com/imgextra/O1CN01MaYXlM1DFgcQv1F0O_!!187-0-lubanu.jpg_100x100q85s150.jpg_.webp" alt="" width="content" height="60%" >
+        </div>
+        <div>
+            <img src="https://gw.alicdn.com/imgextra/O1CN01xGbkq01DItOHg1uLa_!!194-0-lubanu.jpg_200x200q85s150.jpg_.webp" alt="" width="content" height="100%" >
+        </div>
+        <div>
+            <span>有好货</span>
+            <img src="https://gw.alicdn.com/imgextra/i3/59/O1CN01svxvyw1CJ3sFmFcnC_!!59-0-lubanu.jpg_100x100q85s150.jpg_.webp" alt="" width="content" height="60%" >
+        </div>
+        <div>
+            <img src="https://img.alicdn.com/bao/uploaded/i1/243803943/TB2zU6PpXXXXXXzXpXXXXXXXXXX_!!243803943.jpg_300x300q85s150.jpg_.webp" alt="" width="content" height="100%" >
+        </div>
+        <div>
+             <span>哇哦视频</span>
+            <img src="https://img.alicdn.com/bao/uploaded/i4/TB1M2FIQpXXXXbpXpXXXXXXXXXX_!!0-item_pic.jpg_300x300q85s150.jpg_.webp" alt="" width="content" height="60%" >
+        </div>
+        <div>
+            <img src="https://img.alicdn.com/tfs/TB1FXVpRpXXXXX6XFXXXXXXXXXX-800-800.jpg_100x100q85s150.jpg_.webp" alt="" width="content" height="100%" >
+        </div>
+        <div>
+            <span>必买清单</span>
+            <img src="https://gw.alicdn.com/imgextra/i1/11/TB21tk9dJknBKNjSZKPXXX6OFXa_!!11-0-luban.jpg_100x100q85s150.jpg_.webp" alt="" width="content" height="60%" >
+        </div>
+        <div>
+            <img src="https://gw.alicdn.com/imgextra/i3/20/TB2qDqZnxWYBuNjy1zkXXXGGpXa_!!20-0-luban.jpg_200x200q85s150.jpg_.webp" alt="" width="content" height="80%" >
+        </div>
+    </div>
+     <div class="six">
+         <div class="six-a">
+             <img src="http://img.alicdn.com/imgextra/i1/1266505025207716392/TB2OLLjiC0mpuFjSZPiXXbssVXa_!!0-dgshop.jpg" alt="" width="content" height="100%" >
+         </div>
+         <div class="six-b">
+             <img src="https://gw.alicdn.com/imgextra/i3/31/TB2Fq5CmvBNTKJjSszbXXaFrFXa_!!31-0-luban.jpg_200x200q85s150.jpg_.webp" alt="" width="content" height="100%" >
+         </div>
+     </div>
+     <div class="seven">
+         <div>
+             <img src="https://img.alicdn.com/bao/uploaded/i1/12228028851148836/T125TlFdXiXXXXXXXX_!!0-item_pic.jpg_300x300q85s150.jpg_.webp" alt="" width="100%" height="100%" >
+         </div>
+         <div>
+             <img src="https://img.alicdn.com/bao/uploaded/i1/2516027672/O1CN01DPyYUK26XpAPJ95cd_!!2516027672.jpg_300x300q85s150.jpg_.webp" alt="" width="100%" height="100%" >
+         </div>
+         <div>
+             <img src="https://img.alicdn.com/bao/uploaded/i1/324935579/TB24oGxoeGSBuNjSspbXXciipXa_!!324935579.jpg_300x300q85s150.jpg_.webp" alt="" width="100%" height="100%" >
+         </div>
+     </div>
+     <div class="eight">
+     <div>
+    <span>全球购</span>
+     <span>海淘尖货免费领用</span>
+     </div>
+     <div>
+     <span>海淘笔记</span>
+     <span>百万口碑好货实施测评</span>
+     </div>
+</body>
+</html>
