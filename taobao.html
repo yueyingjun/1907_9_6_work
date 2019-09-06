@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        html{
+        font-size: 26.666vw;
+      }
+    body{
+        padding: 0;margin: 0;
+    }
+    .containt{
+        width: 3.75rem;
+        height: 5.87rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+        .top{
+            height: 0.4rem;
+            background-color: #FF852A;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            color: white;
+        }
+        .top .t-l{
+            font-size: 0.3rem;
+            margin-left: 0.15rem;
+
+            float: left;
+        }
+        .top .t-r{
+            height: 0.25rem;
+            width: 3rem;
+            font-size: 0.13rem;
+            float: right;
+            margin-right: 0.2rem;
+            margin-top: 0.08rem;
+           background-color: #FF4E22;
+        }
+        .top .t-r .tr-text{
+            text-align: center;
+            margin-top: 0.05rem;
+        }
+        .pic{
+            height: 1.2rem;
+            width: 100%;
+           background: url("1.jpg") no-repeat center;
+            background-size: 100% auto;
+        }
+        .containter{
+            width: 100%;
+            height: 1.6rem;
+        }
+        .one{
+            height: 0.6rem;
+            width: 0.6rem;
+            float: left;
+            margin-left:0.1rem ;
+            background: #eee;
+            margin-top: 0.1rem;
+        }
+        .containter .b1{
+            background:url("https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b2{
+            background:url("https://img.alicdn.com/tfs/TB10UHQaNjaK1RjSZKzXXXVwXXa-183-144.png?getAvatar=1_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b3{
+            background:url("https://gw.alicdn.com/tfs/TB11rTqtj7nBKNjSZLeXXbxCFXa-183-144.png?getAvatar=1_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b4{
+            background:url("https://gw.alicdn.com/tps/TB1eXc7PFXXXXb4XpXXXXXXXXXX-183-144.png?getAvatar=1_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b5{
+            background:url("https://gw.alicdn.com/tfs/TB1IKqDtpooBKNjSZFPXXXa2XXa-183-144.png_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b6{
+            background:url("https://gw.alicdn.com/tfs/TB1o0FLtyMnBKNjSZFoXXbOSFXa-183-144.png_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b7{
+            background:url("https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b8{
+            background:url("https://gw.alicdn.com/tfs/TB1BqystrZnBKNjSZFrXXaRLFXa-183-144.png?getAvatar=1_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b9{
+            background:url("https://gw.alicdn.com/tfs/TB1CMf4tlnTBKNjSZPfXXbf1XXa-183-144.png?getAvatar=1_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .containter .b10{
+            background:url("https://gw.alicdn.com/tfs/TB18P98tyQnBKNjSZFmXXcApVXa-183-144.png?getAvatar=1_.webp") no-repeat center;
+            background-size: 0.5rem auto;
+            box-sizing: border-box;
+        }
+        .text{
+            font-size: 0.12rem;
+            text-align: center;
+            margin-top: 0.55rem;
+        }
+        .second{
+            width: 100%;
+            height: 0.6rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .second .sl{
+            height: 0.5rem;
+            width: 0.5rem;
+
+        }
+        .second .sl .sl-text{
+            height: 0.35rem;
+            width: 0.35rem;
+
+            margin-left: 0.12rem;
+            margin-top: 0.125rem;
+            position: absolute;
+            font-size: 0.16rem;
+            font-weight: bold;
+        }
+        .sc{
+            display: flex;
+            float: left;
+            height: 100%;
+            width: 2rem;
+            font-size: 0.12rem;
+            flex-wrap:wrap;
+            text-align: center;
+            align-content:center;
+        }
+        .hot-l{
+            border: 0.01rem solid red;
+            color: red;
+            padding: 0.01rem;
+            margin-right:0.01rem ;
+            font-size: 0.12rem;
+        }
+        .sr{
+            height: 0.6rem;
+            width: 0.85rem;
+            background:url("2.jpg");
+            background-size: 0.85rem 0.6rem;
+            box-sizing: border-box;
+        }
+    .ff{
+        width: 100%;
+        height: 2.24rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.1rem;
+        font-size: 0.16rem;
+
+    }
+        .ff1{
+            height: 1.12rem;
+            width: 1.8rem;
+            margin-left: 0.02rem;
+            display: flex;
+
+        }
+        .ff2{
+            height: 1.12rem;
+            width: 0.97rem;
+            margin-left: 0.01rem;
+
+
+        }
+        .ff21p{
+            background: url("https://gw.alicdn.com/imgextra/O1CN018dYKkS1DIQzigJLZo_!!193-0-lubanu.jpg_100x100q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+        .ff22p{
+            background: url("https://gw.alicdn.com/imgextra/O1CN019w2XDJ1Cpa2m1uCAw_!!130-0-lubanu.jpg_200x200q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+        .ff23p{
+            background: url("https://gw.alicdn.com/imgextra/i1/91/O1CN01bvsw4H1CXia7542VZ_!!91-0-lubanu.jpg_100x100q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+        .ff24p{
+            background: url("https://gw.alicdn.com/imgextra/i1/58/O1CN01413Y8u1CIbT5NZqiK_!!58-0-lubanu.jpg_200x200q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+        .ff25p{
+            background: url("https://gw.alicdn.com/imgextra/i4/64/O1CN01FHoTZM1CLLtMXEojz_!!64-0-lubanu.jpg_100x100q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+        .ff26p{
+            background: url("https://gw.alicdn.com/imgextra/i2/193/O1CN010kG7fP1DIQzfPdoGn_!!193-0-lubanu.jpg_200x200q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+        .ff27p{
+            background: url("https://gw.alicdn.com/imgextra/i1/158/TB2VVSRnuySBuNjy1zdXXXPxFXa_!!158-0-luban.jpg_100x100q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+        .ff28p{
+            background: url("https://gw.alicdn.com/imgextra/i3/116/TB2E_q5nuuSBuNjSsziXXbq8pXa_!!116-0-luban.jpg_200x200q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 0.72rem auto;
+        }
+
+        .ff21 {
+            position: relative;
+            left: 0.1rem;
+            top: 0.1rem;
+            color: orangered;
+
+        }
+        .ff23{
+            position: relative;
+            left: 0.1rem;
+            top: 0.1rem;
+            color: #01b5ff;
+        }
+        .ftext{
+            position: relative;
+            font-size: 0.14rem;
+            left: 0.1rem;
+            top: 0.1rem;
+            color: #cccccc;
+        }
+        .ff25{
+            position: relative;
+            left: 0.1rem;
+            top: 0.1rem;
+            color: orange;
+        }
+        .ff27{
+            position: relative;
+            left: 0.1rem;
+            top: 0.1rem;
+            color: darkorange;
+        }
+    .ss{
+        margin-top: 0.1rem;
+        width: 100%;
+        height: 2.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+        .ss1{
+            height: 1.25rem;
+            width: 2.25rem;
+            background: url("http://img.alicdn.com/imgextra/i1/1266505025207716392/TB2OLLjiC0mpuFjSZPiXXbssVXa_!!0-dgshop.jpg") no-repeat center;
+            background-size: 2.25rem auto;
+
+        }
+        .ss11{
+            height: 0.3rem;
+            width: 1rem;
+            background: url("https://gw.alicdn.com/tfs/TB1MGnKQFXXXXcAXpXXXXXXXXXX-1125-87.png?getAvatar=1_.webp") no-repeat left top;
+            background-size: 2.25rem auto;
+        }
+        .ss12{
+            height: 0.2rem;
+            width: 0.2rem;
+            background: url("https://gw.alicdn.com/tfs/TB1I1vQQFXXXXcaXFXXXXXXXXXX-54-54.png_.webp") no-repeat right bottom;
+            position: relative;
+            left: 2rem;
+            top: 0.7rem;
+            background-size: 0.2rem auto;
+        }
+        .ss2{
+            height: 1.25rem;
+            width: 1.23rem;
+        }
+        .ss21p{
+            height: 1.25rem;
+            width: 1.23rem;
+            background: url("https://gw.alicdn.com/tfs/TB1wx_RQFXXXXbGXFXXXXXXXXXX-250-125.png_200x200q85s150.jpg_.webp") no-repeat center;
+            background-size: auto 1.25rem;
+        }
+        .ss22p{
+            height: 1.25rem;
+            width: 1.23rem;
+            background: url("https://gw.alicdn.com/imgextra/i2/160/TB2P96phcjI8KJjSsppXXXbyVXa_!!160-0-luban.jpg_200x200q85s150.jpg_.webp") no-repeat center;
+            background-size: auto 1.25rem;
+        }
+        .ss23p{
+            height: 1.25rem;
+            width: 1.23rem;
+            background: url("https://gw.alicdn.com/imgextra/i4/47/TB2P0ICiv2H8KJjy1zkXXXr7pXa_!!47-0-luban.jpg_200x200q85s150.jpg_.webp") no-repeat center;
+            background-size: auto 1.25rem;
+        }
+        .ss24p{
+            height: 1.25rem;
+            width: 1.23rem;
+            background: url("https://gw.alicdn.com/imgextra/i1/81/TB2zQhdcoR1BeNjy0FmXXb0wVXa_!!81-0-luban.jpg_200x200q85s150.jpg_.webp") no-repeat center;
+            background-size: auto 1.25rem;
+        }
+        .live{
+            height: 0.2rem;
+            width: 0.3rem;
+            background: url("https://gw.alicdn.com/tfs/TB1mQYqQFXXXXXKapXXXXXXXXXX-90-44.png_.webp") no-repeat left ;
+            position: relative;
+            top: 1.05rem;
+            background-size:0.3rem auto;
+        }
+    .sev{
+        height: 0.36rem;
+        width: 100%;
+        display: flex;
+        font-size: 0.12rem;
+        justify-content: space-between;
+        margin-top: 0.1rem;
+        flex-wrap: wrap;
+
+    }
+        .sev-l{
+            width: 2.5rem;
+            height: 0.36rem;
+            display: flex;
+            justify-content: center;
+        }
+        .sevl1{
+            border: 0.01rem solid red;
+            height: 0.16rem;
+            color: red;
+            margin-right:0.01rem ;
+            font-size: 0.12rem;
+        }
+
+        .seven{
+            width: 100%;
+            display: flex;
+            font-size: 0.12rem;
+            margin-top: 0.1rem;
+            flex-wrap: wrap;
+            height: 1.35rem;
+            justify-content: center;
+        }
+        .seven1{
+            height: 1.25rem;
+            width: 2.50rem;
+            background: url("http://img.alicdn.com/i3/TB2SIVXiR0kpuFjSsziXXa.oVXa_!!2205092706-0-beehive-scenes.jpg_200x200q85s150.jpg_.webp") no-repeat center;
+            background-size: 2.50rem auto;
+        }
+        .sev11{
+            width: 1rem;
+            height: 0.25rem;
+            background:url("https://gw.alicdn.com/tfs/TB1R07AQVXXXXcEXpXXXXXXXXXX-1125-87.png?getAvatar=1_.webp") no-repeat left;
+            background-size: auto 0.3rem;
+        }
+        .seven2{
+            height: 1.25rem;
+            width: 1.25rem;
+            background: url("http://gw.alicdn.com/bao/uploaded/TB1tJ3ZPXXXXXXDXFXXXXXXXXXX-510-315.png_200x200q85s150.jpg_.webp") no-repeat bottom;
+            background-size: 1.25rem auto;
+        }
+    </style>
+</head>
+<body>
+<div   class="containt">
+    <div class="top">
+        <div class="t-l">
+            淘
+        </div>
+        <div class="t-r">
+            <div class="tr-text">
+                寻找宝贝店铺
+            </div>
+        </div>
+    </div>
+    <div class="pic"></div>
+    <div class="containter">
+        <div class="one b1">
+
+            <div class="text">天猫</div>
+        </div>
+        <div class="one b2">
+            <div class="text">聚划算</div>
+        </div>
+        <div class="one b3">
+            <div class="text">天猫国际</div>
+        </div>
+        <div class="one b4">
+            <div class="text">外卖</div>
+        </div>
+        <div class="one b5">
+            <div class="text">天猫超市</div>
+        </div>
+        <div class="one b6">
+            <div class="text">充值中心</div>
+        </div>
+        <div class="one b7">
+            <div class="text">飞猪旅行</div>
+        </div>
+        <div class="one b8">
+            <div class="text">领金币</div>
+        </div>
+        <div class="one b9">
+            <div class="text">拍卖</div>
+        </div>
+        <div class="one b10">
+            <div class="text">分类</div>
+        </div>
+    </div>
+    <div class="second">
+        <div class="sl">
+            <div class="sl-text">
+                淘宝头条
+            </div>
+        </div>
+        <div class="sc">
+            <div class="hot hot-l">热门</div>
+            <div class="hot hot-r">糖酥饼真香警告|食说..............</div>
+            <div class="hot hot-l">热门</div>
+            <div class="hot hot-r">这减肥道菜，既开胃又不失营养</div>
+        </div>
+        <div class="sr"></div>
+
+    </div>
+    <div class="ff">
+        <div class="ff1">
+            <div class="ff2 ff21p">
+                <span class="ff21">淘抢购</span>
+            </div>
+            <div class="ff2 ff22p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff23p ">
+                <span class="ff23">有好货</span><br>
+                <span class="ftext">高颜值美物</span>
+            </div>
+            <div class="ff2 ff24p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff25p">
+                <span class="ff25">哇哦视频</span><br>
+                <span class="ftext">有科小视频</span>
+            </div>
+            <div class="ff2 ff26p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff27p">
+                <span class="ff27">必买清单</span><br>
+                <span class="ftext">什么值得买</span>
+            </div>
+            <div class="ff2 ff28p"></div>
+        </div>
+
+    </div>
+    <div class="ss">
+        <div class="ss1">
+                <div class="ss11"></div>
+                <div class="ss12"></div>
+        </div>
+        <div class="ss2 ss21p">
+
+        </div>
+        <div class="ss2 ss22p">
+            <div class="live"></div>
+        </div>
+        <div class="ss2 ss23p">
+            <div class="live"></div>
+        </div>
+        <div class="ss2 ss24p">
+            <div class="live"></div>
+        </div>
+    </div>
+    <div class="sev">
+
+        <div class="sev-l">
+            <div class="sevl1">
+                主播推荐
+            </div>
+            <div class="hot-sevl2r">
+                品牌好货，不能错过的亲民价
+            </div>
+        </div>
+        <div class="sev-r">
+            抢福利>
+        </div>
+    </div>
+    <div class="seven">
+        <div class="seven1">
+            <div class="sev11"></div>
+        </div>
+        <div class="seven2 sev2p">
+
+        </div>
+    </div>
+    <div class="ff">
+        <div class="ff1">
+            <div class="ff2 ff21p">
+                <span class="ff21">淘抢购</span>
+            </div>
+            <div class="ff2 ff22p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff23p ">
+                <span class="ff23">有好货</span><br>
+                <span class="ftext">高颜值美物</span>
+            </div>
+            <div class="ff2 ff24p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff25p">
+                <span class="ff25">哇哦视频</span><br>
+                <span class="ftext">有科小视频</span>
+            </div>
+            <div class="ff2 ff26p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff27p">
+                <span class="ff27">必买清单</span><br>
+                <span class="ftext">什么值得买</span>
+            </div>
+            <div class="ff2 ff28p"></div>
+        </div>
+
+    </div>
+    <div class="ff">
+        <div class="ff1">
+            <div class="ff2 ff21p">
+                <span class="ff21">淘抢购</span>
+            </div>
+            <div class="ff2 ff22p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff23p ">
+                <span class="ff23">有好货</span><br>
+                <span class="ftext">高颜值美物</span>
+            </div>
+            <div class="ff2 ff24p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff25p">
+                <span class="ff25">哇哦视频</span><br>
+                <span class="ftext">有科小视频</span>
+            </div>
+            <div class="ff2 ff26p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff27p">
+                <span class="ff27">必买清单</span><br>
+                <span class="ftext">什么值得买</span>
+            </div>
+            <div class="ff2 ff28p"></div>
+        </div>
+
+    </div>
+    <div class="ff">
+        <div class="ff1">
+            <div class="ff2 ff21p">
+                <span class="ff21">淘抢购</span>
+            </div>
+            <div class="ff2 ff22p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff23p ">
+                <span class="ff23">有好货</span><br>
+                <span class="ftext">高颜值美物</span>
+            </div>
+            <div class="ff2 ff24p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff25p">
+                <span class="ff25">哇哦视频</span><br>
+                <span class="ftext">有科小视频</span>
+            </div>
+            <div class="ff2 ff26p"></div>
+        </div>
+        <div class="ff1">
+            <div class="ff2 ff27p">
+                <span class="ff27">必买清单</span><br>
+                <span class="ftext">什么值得买</span>
+            </div>
+            <div class="ff2 ff28p"></div>
+        </div>
+
+    </div>
+    <div class="seven">
+        <div class="seven1">
+            <div class="sev11"></div>
+        </div>
+        <div class="seven2 sev2p">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
