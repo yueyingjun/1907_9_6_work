@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wait{
+            width: 150px;
+            height: 150px;
+            /*border: 1px solid black;*/
+            position: relative;
+            border-radius: 50%;
+
+        }
+        .opt{
+            position: absolute;
+            left: 60px;
+            top: 0;
+            width: 30px;
+            height:30px ;
+            border-radius: 50%;
+            /*border: 1px solid red;*/
+            transform-origin: center 75px;
+        }
+        .opt:nth-child(1){
+        transform: rotate(0deg);
+        animation: flash1 1s infinite;
+        }
+        .opt:nth-child(2){
+            transform: rotate(40deg);
+            animation: flash2 1s infinite;
+        }
+        .opt:nth-child(3){
+            transform: rotate(80deg);
+            animation: flash3 1s infinite;
+        }
+        .opt:nth-child(4){
+            transform: rotate(120deg);
+            animation: flash4 1s infinite;
+        }
+        .opt:nth-child(5){
+            transform: rotate(160deg);
+            animation: flash5 1s infinite;
+        }
+        .opt:nth-child(6){
+            transform: rotate(200deg);
+            animation: flash6 1s infinite;
+        }
+        .opt:nth-child(7){
+            transform: rotate(2400deg);
+            animation: flash7 1s infinite;
+        }
+        .opt:nth-child(8){
+            transform: rotate(280deg);
+            animation: flash8 1s infinite;
+        }
+        .opt:nth-child(9){
+            transform: rotate(320deg);
+            animation: flash9 1s infinite;
+        }
+
+        @keyframes flash1{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            10%{
+                background: rgba(0,0,0,0.1);
+            }
+            20%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash2{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            20%{
+                background: rgba(0,0,0,0.2);
+            }
+            30%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash3{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            30%{
+                background: rgba(0,0,0,0.3);
+            }
+            40%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash4{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            40%{
+                background: rgba(0,0,0,0.4);
+            }
+            50%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash5{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            50%{
+                background: rgba(0,0,0,0.5);
+            }
+            60%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash6{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            60%{
+                background: rgba(0,0,0,0.6);
+            }
+            70%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash7{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            70%{
+                background: rgba(0,0,0,0.7);
+            }
+            80%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash8{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            80%{
+                background: rgba(0,0,0,0.8);
+            }
+            90%{
+                background: rgba(0,0,0,0);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+        @keyframes flash9{
+            0%{
+                background: rgba(0,0,0,0);
+            }
+            90%{
+                background: rgba(0,0,0,0.9);
+            }
+            100%{
+                background: rgba(0,0,0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wait">
+    <div class="opt"></div>
+    <div class="opt"></div>
+    <div class="opt"></div>
+    <div class="opt"></div>
+    <div class="opt"></div>
+    <div class="opt"></div>
+    <div class="opt"></div>
+    <div class="opt"></div>
+    <div class="opt"></div>
+</div>
+
+
+
+</body>
+</html>
