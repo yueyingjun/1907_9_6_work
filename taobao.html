@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;padding: 0;
+            list-style: none;
+        }
+        html{
+            font-size:26.666667vw ;
+        }
+        .box{
+            width: 100%;
+            position: relative;
+        }
+        .one{
+            width: 100%;height: 0.37rem;
+            background: coral;
+            background-image: url("data:image/png;base64,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");
+            background-repeat: no-repeat;
+            background-size: 0.27rem 0.2rem;
+            background-position: 0.09rem center ;
+            position: relative;
+        }
+        .one .sousuo{
+            width:75%;height: 0.25rem;
+            background-color: #FF4E22;
+            border-radius: 0.04rem;
+            position: absolute;
+            left: 0.55rem;top: 0.06rem;
+        }
+        .sousuo-zi{
+            width: 1rem;height: 0.3rem;
+   /*         border: 1px solid red;*/
+            font-family:h5index-iconfont ;
+            font-size: 0.13rem;
+            color: #F0E0DC;
+            position: absolute;
+            left: 0.9rem;
+            top: 0.03rem;
+            letter-spacing: 0.02rem;
+        }
+        .two{
+
+            width: 100%;height: 1.2rem;
+            background-image: url("https://aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg");
+            background-size: 100% auto;
+        }
+        .three{
+            width: 100%;height: 1.6rem;
+            /*border: 1px solid ;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            position: relative;
+
+        }
+
+        .three .tu1{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu2{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://img.alicdn.com/tfs/TB10UHQaNjaK1RjSZKzXXXVwXXa-183-144.png?getAvatar=1_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu3{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB11rTqtj7nBKNjSZLeXXbxCFXa-183-144.png?getAvatar=1_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu4{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tps/TB1eXc7PFXXXXb4XpXXXXXXXXXX-183-144.png?getAvatar=1_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu5{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB1IKqDtpooBKNjSZFPXXXa2XXa-183-144.png_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu6{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB1o0FLtyMnBKNjSZFoXXbOSFXa-183-144.png_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu7{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu8{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB1BqystrZnBKNjSZFrXXaRLFXa-183-144.png?getAvatar=1_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu9{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB1CMf4tlnTBKNjSZPfXXbf1XXa-183-144.png?getAvatar=1_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .tu10{
+            width: 0.61rem;height: 0.48rem;
+            margin-left: 0.05rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB18P98tyQnBKNjSZFmXXcApVXa-183-144.png?getAvatar=1_.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .three .zi1{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 0.27rem;
+            top: 0.7rem;
+        }
+        .three .zi2{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 0.96rem;
+            top: 0.7rem;
+        }
+        .three .zi3{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 1.67rem;
+            top: 0.7rem;
+        }
+        .three .zi4{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 2.53rem;
+            top: 0.7rem;
+        }
+        .three .zi5{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 3.17rem;
+            top: 0.7rem;
+
+        }
+        .three .zi6{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 0.18rem;
+            top: 1.5rem;
+
+        }
+        .three .zi7{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 0.90rem;
+            top: 1.5rem;
+
+        }
+        .three .zi8{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 1.72rem;
+            top: 1.5rem;
+        }
+        .three .zi9{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 2.53rem;
+            top: 1.5rem;
+        }
+        .three .zi10{
+            width: 0.61rem;height: 0.14rem;
+            font-size: 0.11rem;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            left: 3.27rem;
+            top: 1.5rem;
+        }
+
+        .four{
+            width: 100%;height: 0.6rem;
+            border: 1px solid lavender;
+            position: absolute;
+            top: 3.4rem;
+            overflow: hidden;
+        }
+       .four  .left{
+            width: 0.35rem;height: 0.35rem;
+            background-image: url("https://gw.alicdn.com//tfs//TB1TBEMXU6FK1Jjy1XdXXblkXXa-105-107.png_.webp");
+            float: left;
+            font-size:0.16rem ;
+            background-size: 100% auto;
+            margin-top: 0.1rem;
+            margin-left: 0.2rem;
+        }
+      .four .right{
+          width: 85%;height: 100%;
+          background:coral;
+          margin-left: 0.7rem;
+
+
+
+      }
+      .four .right .zi{
+          font-size: 0.12rem;
+          margin-left: 0.5rem;
+          padding-top: 0.05rem;
+          line-height: 0.2rem;
+      }
+
+        .five{
+            width: 100%;height: 2.24rem;
+            /*border: 1px solid lavender;*/
+            position: absolute;
+            margin-top: 0.9rem;
+
+        }
+       .five .left{
+            width: 100%;height: 50%;
+            border-bottom: 1px solid lavender;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: flex-start;
+
+           position: relative;
+        }
+        .five .left .tu{
+            width: 0.9rem;height: 1.12rem;
+            border: 1px solid lavender;
+
+        }
+        .five .left .tu:nth-of-type(1){
+            background:red;
+        }
+        .five .left .tu:nth-of-type(2){
+            background:orange;
+        }
+        .five .left .tu:nth-of-type(3){
+            background:yellow;
+        }
+        .five .left .tu:nth-of-type(4){
+            background:greenyellow;
+        }
+        .five .left .tu:nth-of-type(5){
+            background:blue;
+        }
+        .five .left .tu:nth-of-type(6){
+            background:dodgerblue;
+        }
+        .five .left .tu:nth-of-type(7){
+            background:darkmagenta;
+        }
+        .five .left .tu:nth-of-type(8){
+            background:pink;
+        }
+
+      .six{
+          width: 100%;height: 3.2rem;
+          border: 1px solid red;
+          margin-top: 3.25rem;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          position: relative;
+
+      }
+      .six .tu{
+          width: 1.25rem;height: 1.25rem;
+          border: 1px solid #FF4E22;
+
+      }
+       .six .tu:nth-of-type(1){
+           background: yellow;
+           flex-grow: 2;
+       }
+        .six .tu:nth-of-type(2){
+            background: beige;
+        }
+        .six .tu:nth-of-type(3){
+            background: orange;
+            position: absolute;
+            left: 0.02rem;
+            top: 1.25rem;
+        }
+        .six .tu:nth-of-type(4){
+            background: cornflowerblue;
+            position: absolute;
+            left: 1.27rem;
+            top: 1.25rem;
+        }
+        .six .tu:nth-of-type(5){
+            background: greenyellow;
+            position: absolute;
+            left: 2.5rem;
+            top: 1.25rem;
+        }
+        .six .zuojiao{
+            width: 25%;height: 0.29rem;
+            border: 1px solid gainsboro;
+            border-radius:0 0.5rem 0.5rem 0;
+            font-size: 0.18rem;
+            background: deeppink;
+            color: white;
+            position: absolute;
+            left: 0.5px;
+           padding-left: 0.05rem;
+        }
+
+        .six .zi1{
+            width: 0.85rem;height: 0.32rem;
+            border: 1px solid red;
+            position: absolute;
+            left: 0.15rem;
+            top: 2.7rem;
+            font-size: 0.2rem;
+            padding-left: 0.05rem;
+        }
+        .six .zi2{
+            width: 0.85rem;height: 0.32rem;
+            border: 1px solid red;
+            position: absolute;
+            left: 1.4rem;
+            top: 2.7rem;
+            font-size: 0.2rem;
+            padding-left: 0.05rem;
+        }
+        .six .zi3{
+            width: 0.85rem;height: 0.32rem;
+            border: 1px solid red;
+            position: absolute;
+            left: 2.7rem;
+            top: 2.7rem;
+            font-size: 0.2rem;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <div class="one">
+       <div class="sousuo">
+           <span class="sousuo-zi">寻找宝贝店铺</span>
+       </div>
+    </div>
+    <div class="two"></div>
+    <div class="three">
+        <div class="tu1"></div>
+        <div class="tu2"></div>
+        <div class="tu3"></div>
+        <div class="tu4"></div>
+        <div class="tu5"></div>
+        <div class="tu6"></div>
+        <div class="tu7"></div>
+        <div class="tu8"></div>
+        <div class="tu9"></div>
+        <div class="tu10"></div>
+        <div class="zi1">天猫</div>
+        <div class="zi2">聚划算</div>
+        <div class="zi3">天猫国际</div>
+        <div class="zi4">外卖</div>
+        <div class="zi5">天猫超市</div>
+        <div class="zi6">充值中心</div>
+        <div class="zi7">飞猪旅行</div>
+        <div class="zi8">领金币</div>
+        <div class="zi9">拍卖</div>
+        <div class="zi10">分类</div>
+    </div>
+    <div class="four">
+        <div class="left"></div>
+        <div class="right">
+            <div class="zi">
+                酥油饼真香警告|食说<br>
+                减肥吃这道菜，既开胃又不失营养
+            </div>
+        </div>
+    </div>
+    <div class="five">
+        <div class="left">
+            <div class="tu"></div>
+            <div class="tu"></div>
+            <div class="tu"></div>
+            <div class="tu"></div>
+            <div class="tu"></div>
+            <div class="tu"></div>
+            <div class="tu"></div>
+            <div class="tu"></div>
+        </div>
+    </div>
+    <div class="six">
+        <div class="tu"></div>
+        <div class="tu"></div>
+        <div class="tu"></div>
+        <div class="tu"></div>
+        <div class="tu"></div>
+        <div class="zuojiao">淘宝直播</div>
+        <div class="zi1">美食美味</div>
+        <div class="zi2">珠光宝气</div>
+        <div class="zi3">全球现场</div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
