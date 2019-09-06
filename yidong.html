@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0 maximum-scale=1.0,minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<meta name="keywords" content="移动端"/>
+	<meta ="description" content="移动端"/>
+	<title>移动端</title>
+	
+	<style>
+		html{
+			font-size:26.6667vw;
+		} 
+		body,ul,li,div{
+			margin:0;padding:0;
+			list-style:none;
+		}
+		.search{
+			width:100%;height:0.37rem;
+			background-color:#FF4E22;
+			position:relative;
+		}
+		.lunbo{
+			width:100%;height:1.2rem;
+			background-color:yellow;
+		}
+		
+		.fenlei{
+			width:100%;height:1.6rem;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-around;
+			align-items:center;
+		}
+		.fenlei>div{
+			width:0.63rem;height:0.67rem;
+		}
+		.leibie-name{
+			font-size:0.11rem;
+			color: rgb(102, 102, 102);
+			text-align:center;
+			margin-top:0.55rem;
+		}
+		.leibie1{
+			background-image:url(https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie2{
+			background-image:url(https://img.alicdn.com/tfs/TB10UHQaNjaK1RjSZKzXXXVwXXa-183-144.png?getAvatar=1_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie3{
+			background-image:url(https://gw.alicdn.com/tfs/TB11rTqtj7nBKNjSZLeXXbxCFXa-183-144.png?getAvatar=1_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie4{
+			background-image:url(https://gw.alicdn.com/tps/TB1eXc7PFXXXXb4XpXXXXXXXXXX-183-144.png?getAvatar=1_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie5{
+			background-image:url(https://gw.alicdn.com/tfs/TB1IKqDtpooBKNjSZFPXXXa2XXa-183-144.png_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie6{
+			background-image:url(https://gw.alicdn.com/tfs/TB1o0FLtyMnBKNjSZFoXXbOSFXa-183-144.png_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie7{
+			background-image:url(https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie8{
+			background-image:url(https://gw.alicdn.com/tfs/TB1BqystrZnBKNjSZFrXXaRLFXa-183-144.png?getAvatar=1_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie9{
+			background-image:url(https://gw.alicdn.com/tfs/TB1CMf4tlnTBKNjSZPfXXbf1XXa-183-144.png?getAvatar=1_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.leibie10{
+			background-image:url(https://gw.alicdn.com/tfs/TB18P98tyQnBKNjSZFmXXcApVXa-183-144.png?getAvatar=1_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.toutiao{
+			width:100%;height:0.6rem;
+			background:pink;
+		}
+		.toutiao .left{
+			width:0.4rem;height:0.5rem;
+			font-size:0.16rem;
+			margin-left:0.2rem;
+		}
+		.qianggou>div{
+			float:left;
+			width:0.937rem;height:1.12rem;	
+		}
+		.qianggou-one{
+			background-image:url(image/1.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.qianggou-two{
+			background-image:url(image/2.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.qianggou-three{
+			background-image:url(image/3.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.qianggou-four{
+			background-image:url(image/4.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.qianggou-five{
+			background-image:url(image/5.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.qianggou-six{
+			background-image:url(image/6.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.qianggou-seven{
+			background-image:url(image/7.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.qianggou-eight{
+			background-image:url(image/8.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		.zhibo{
+			float:left;
+			width:100%;height:0.29rem;	
+			position:relative;
+			z-index:5;
+		}
+		.zhibo .text{
+			width:0.93rem;height:0.29rem;
+			border-radius:0 30% 30% 0;
+			background-color:#ff359a;
+			font-size:0.17rem;
+			color:white;
+			text-align:center;
+		}
+		.zhibo-bottom-one{
+			width:2.495rem;height:1.255rem;
+			background:red;
+			position:absolute;
+			left:0;top:0.1rem;
+			z-index:-1;
+		}
+		.zhibo-bottom-two{
+			width:1.25rem;height:1.25rem;
+			background:green;
+			position:absolute;
+			left:2.495rem;top:0.1rem;
+		}
+		.zhibo-bottom-three{
+			width:1.245rem;height:1.255rem;
+			background:green;
+			position:absolute;
+			left:0;top:1.355rem;
+		}
+		.zhibo-bottom-four{
+			width:1.5rem;height:1.255rem;
+			background:blue;
+			position:absolute;
+			left:1.245rem;top:1.355rem;
+		}
+		.zhibo-bottom-five{
+			width:1.25rem;height:1.255rem;
+			background:yellow;
+			position:absolute;
+			left:2.49rem;top:1.355rem;
+		}
+		
+		.zhubotuijian{
+			width:100%;height:0.36rem;
+			position:absolute;
+			left:0;top:2.62rem;
+		}
+		.zhubotuijian .left{
+			width:0.49rem;height:0.154rem;
+			border:1px solid #ff2d2d;
+			border-radius:5%;
+			font-size:0.12rem;
+			color:#ff2d2d;
+			margin-top:0.1rem;
+		}
+		.zhubotuijian .middle{
+			width:1.85rem;height:0.16rem;
+			font-size:0.14rem;
+			position:absolute;
+			left:0.59rem;top:0.1rem;
+		}
+		.zhubotuijian .right{
+			width:0.6rem;height:0.16rem;
+			font-size:0.14rem;
+			position:absolute;
+			right:0;top:0.1rem;
+			font-size:0.14rem;
+		}
+		
+		.maibian .text{
+			width:0.93rem;height:0.29rem;
+			border-radius:0 30% 30% 0;
+			background-color:#b15bff;
+			font-size:0.17rem;
+			color:white;
+			text-align:center;
+			position:absolute;
+			left:0;top:9rem;
+		}
+		.maibian .one{
+			width:2.495rem;height:1.255rem;
+			background:red;
+			position:absolute;
+			left:0;top:9.1rem;
+			z-index:-1;
+		}
+		.maibian .two{
+			width:1.25rem;height:0.128rem;
+			font-size:0.14rem;
+			color:#333333;
+			position:absolute;
+			left:2.6rem;top:9.1rem;
+		}
+		.maibian .three{
+			width:0.105rem;height:0.12rem;
+			background-image:url(https://img.alicdn.com/tfs/TB1kpFoV4naK1RjSZFtXXbC2VXa-31-31.png_.webp);
+			background-size:auto 100%;
+			background-repeat:no-repeat;
+			position:absolute;
+			left:2.6rem;top:9.3rem;
+		}
+		.maibian .hanguo{
+			width:1.0949rem;height:0.128rem;
+			font-size:0.1rem;
+			position:absolute;
+			left:2.78rem;top:9.3rem;
+		}
+		.maibian .four{
+			width:1.1rem;height:0.7rem;
+			background-image:url(http://gw.alicdn.com/bao/uploaded/TB1tJ3ZPXXXXXXDXFXXXXXXXXXX-510-315.png_200x200q85s150.jpg_.webp);
+			background-size:auto 100%;
+			background-repeat:no-repeat;
+			position:absolute;
+			left:2.6rem;top:9.5rem;
+		}
+		.maibian .five{
+			position:relative;
+			width:0.94rem;height:1.23rem;
+			position:absolute;
+			left:0;top:10.35rem;
+		}
+		.youxuan{
+			font-size:0.14rem;
+			color: rgb(151, 61, 255);
+			padding-left:0.1rem;
+			padding-top:0.1rem;
+		}
+		.youxuan-pic{
+			width:0.35rem;height:0.14rem;
+			background-image:url(https://gw.alicdn.com/tfs/TB1ScuFSpXXXXbOXXXXXXXXXXXX-105-42.png_.webp);
+			background-size:auto 100%;
+			background-repeat:no-repeat;
+			position:absolute;
+			left:0.7rem;top:0.145rem;
+		}
+		.youxuan-text{
+			width:1.785rem;height:0.144rem;
+			color: rgb(153, 153, 153);
+			font-size:0.12rem;
+			position:absolute;
+			left:0.1rem;
+		}
+		.five .pic{
+			width:0.62rem;height:0.62rem;
+			background-image:url(https://gw.alicdn.com/imgextra/i1/52/TB2wyCKvBjTBKNjSZFuXXb0HFXa_!!52-2-luban.png_100x100q85s150.jpg_.webp);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+			position:absolute;
+			left:0.2rem;bottom:0;
+		}
+		.maibian .six{
+			width:0.935rem;height:1.23rem;
+			position:absolute;
+			left:0.94rem;top:10.34rem;
+		} 
+		.six-pic{
+			width:0.62rem;height:0.62rem;
+			background-image:url(https://gw.alicdn.com/imgextra/i2/46/TB29kkMwx1YBuNjy1zcXXbNcXXa_!!46-2-luban.png_100x100q85s150.jpg_.webp);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			margin-top:0.615rem;
+			margin-left:0.2rem;
+		}
+		.tao{
+			width:0.27rem;height:0.3rem;
+			background-image:url(data:image/png;base64,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);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+			margin-left:0.1rem;
+			background-position:center;
+		}
+		.sousuokuang{
+			width:3rem;height:0.25rem;
+			background:#ff0000;
+			position:absolute;
+			left:0.6rem;top:0.05rem;
+			color: #F0E0DC;
+			font-size:0.13rem;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+<div class="search">
+	<div class="tao"></div>
+	<div class="sousuokuang">寻找店内宝贝</div>
+</div>
+<div class="lunbo"></div>
+<div class="fenlei">
+	<div class="leibie1">
+		<div class="leibie-name">天猫</div>
+	</div>
+	<div class="leibie2">
+		<div class="leibie-name">聚划算</div>
+	</div>
+	<div class="leibie3">
+		<div class="leibie-name">天猫国际</div>
+	</div>
+	<div class="leibie4">
+		<div class="leibie-name">外卖</div>
+	</div>
+	<div class="leibie5">
+		<div class="leibie-name">天猫超市</div>
+	</div>
+	<div class="leibie6">
+		<div class="leibie-name">充值中心</div>
+	</div>
+	<div class="leibie7">
+		<div class="leibie-name">飞猪旅行</div>
+	</div>
+	<div class="leibie8">
+		<div class="leibie-name">领金币</div>
+	</div>
+	<div class="leibie9">
+		<div class="leibie-name">拍卖</div>
+	</div>
+	<div class="leibie10">
+		<div class="leibie-name">分类</div>
+	</div>
+</div>
+<div class="toutiao">
+	<div class="left">淘宝<br/>头条</div>
+</div>
+<div class="qianggou">
+	<div class="qianggou-one"></div>
+	<div class="qianggou-two"></div>
+	<div class="qianggou-three"></div>
+	<div class="qianggou-four"></div>
+	<div class="qianggou-five"></div>
+	<div class="qianggou-six"></div>
+	<div class="qianggou-seven"></div>
+	<div class="qianggou-eight"></div>
+</div>
+<div class="zhibo">
+	<div class="text">淘宝直播</div>
+	<div class="zhibo-bottom-one"></div>
+	<div class="zhibo-bottom-two"></div>
+	<div class="zhibo-bottom-three"></div>
+	<div class="zhibo-bottom-four"></div>
+	<div class="zhibo-bottom-five"></div>
+	<div class="zhubotuijian">
+		<div class="left">主播推荐</div>
+		<div class="middle">品质好货，不能错过的亲民价</div>
+		<div class="right">抢福利></div>
+	</div>
+</div>
+
+
+<div class="maibian">
+	<div class="text">买遍全球</div>
+	<div class="one"></div>
+	<div class="two">Tonymoly</div>
+	<div class="three"></div>
+	<div class="hanguo">韩国</div>
+	<div class="four"></div>
+	<div class="five">
+		<div class="youxuan">进口优选</div>
+		<div class="youxuan-pic"></div>
+		<div class="youxuan-text">正品保障15天售后无忧</div>
+		<div class="pic"></div>
+	</div>
+	<div class="six">
+		<div class="six-pic"></div>
+	</div>
+	
+</div>
+</body>
+</html>
