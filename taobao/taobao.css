@@ -1,0 +1,221 @@
+[rem="375"]{
+    font-size: 26.666666vw;
+}
+body{
+    padding: 0;margin: 0;
+}
+.nav{
+    background: #FF852A;
+    width: 3.75rem;height: 0.4rem;
+    float: left;
+}
+
+.tao{
+    background: url("image/A.png") no-repeat center;
+    background-size: auto;
+    width: 0.45rem;height: 0.3rem;
+    padding-top: 0.13rem;
+    float: left;
+}
+.sousuo{
+    width: 3rem;height: 0.3rem;
+    background: #FF4E22;
+    border-radius: 3rem;
+    float: left;
+    margin-left: 0.06rem;
+    margin-top: 0.05rem;
+}
+.sousuo span{
+    font-size: 0.13rem;
+    display: block;
+    float: left;
+    margin-left: 1rem;
+    margin-top: 0.05rem;
+    color: white;
+}
+.p{
+    width: 100%;height: 1.5rem;
+    background: url("http://gw.alicdn.com/imgextra/i1/26/O1CN01NPgg341C3wr4hwHrw_!!26-0-lubanu.jpg") no-repeat center;
+    background-size: 100% 100%;
+    float: left;
+}
+.box {
+    width: 100%;
+    height: 1.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+
+}
+.list{
+    width: .72rem; height: 0.8rem;
+
+}
+.list img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.t{
+    font-size: 0.14rem;
+    line-height: 0.2rem;
+    text-align: center;
+}
+.item{
+    width: 0.5rem;height: 0.5rem;
+    margin: auto;
+}
+.guanggao{
+    width: 4.7rem;height: .75rem;
+
+}
+.g-left{
+    display: block;
+    float: left;
+    font-size: .24rem;
+    color: brown;
+}
+.g-mid{
+    margin-top: .05rem;
+    display: block;
+    float: left;
+    font-size: .12rem;
+    margin-left: .16rem;
+}
+.g-right{
+    width: .85rem;height: .75rem;
+    background: url("https://gw.alicdn.com/mt/TB1qv5geRWD3KVjSZFsXXcqkpXa-640-398.jpg") no-repeat center;
+    float: right;
+}
+.g-mid span{
+    line-height: .28rem;
+}
+.all{
+    width: 100%; height: 1.8rem;
+
+    margin-top:0.8rem;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.pho:nth-child(1){
+    width: 0.912rem;
+    height: 0.9rem;
+
+    background: url("https://gw.alicdn.com/imgextra/O1CN01xiw2lM1DH3o9mwGXS_!!190-0-lubanu.jpg_100x100q85s150.jpg_.webp")
+no-repeat center;
+}
+.pho:nth-child(2){
+    width: 0.912rem;
+    height: 0.9rem;
+
+    background: url("https://gw.alicdn.com/imgextra/O1CN01P8eCBi1CCeNa3MfR0_!!45-0-lubanu.jpg_200x200q85s150.jpg_.webp")
+    no-repeat center;
+}
+.pho:nth-child(3){
+    width: 0.912rem;
+    height: 0.9rem;
+
+    background: url("https://gw.alicdn.com/imgextra/i4/21/TB2TfB1aNTpK1RjSZR0XXbEwXXa_!!21-0-luban.jpg_100x100q85s150.jpg_.webp")
+    no-repeat center;
+}
+.pho:nth-child(4){
+    width: 0.912rem;
+    height: 0.9rem;
+
+    background: url("image/motuo.png")
+    no-repeat center;
+}
+.pho:nth-child(5){
+    width: 0.912rem;
+    height: 0.9rem;
+
+    background: url("https://gw.alicdn.com/imgextra/i1/113/O1CN01JMPUH21ChnHDCPAzo_!!113-0-lubanu.jpg_100x100q85s150.jpg_.webp")
+    no-repeat center;
+}
+.pho:nth-child(6){
+    width: 0.912rem;
+    height: 0.9rem;
+
+    background: url("image/zhenzhu.png")
+    no-repeat center;
+}
+.pho:nth-child(7){
+    width: 0.912rem;
+    height: 0.9rem;
+
+    background: url("https://gw.alicdn.com/imgextra/i2/32/TB2BzLKnxGYBuNjy0FnXXX5lpXa_!!32-0-luban.jpg_100x100q85s150.jpg_.webp")
+    no-repeat center;
+}
+
+.pho:nth-child(8){
+    width: 0.912rem;
+    height: 0.9rem;
+    background: url("image/shoulian.png")
+    no-repeat center;
+}
+.zong {
+    width: 3.75rem;
+    height: 1.8rem;
+    margin-top: .2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.zhibo{
+    width: 1.3rem; height: 0.25rem;
+    background: url("image/zhibo.png") no-repeat center;
+    border-radius: 0 4rem 4rem 0;
+    position: absolute;
+
+}
+
+.t1{
+    float: left;
+    font-size: .16rem;
+    color: #fafafa;
+    margin-top: .7rem;
+    margin-left: .2rem;
+}
+.t2{
+    float: left;
+    font-size: .16rem;
+    color: #fafafa;
+    margin-top: 0.45rem;
+    margin-left: .2rem;
+}
+.tu:nth-child(1){
+    width: 66.66%;height: 0.9rem;
+
+    background: url("image/nvren.png") no-repeat center;
+    background-size: 100%;
+}
+
+.tu:nth-child(2){
+
+    width: 1.2rem;height: 0.9rem;
+    background: url("image/chenyi.png") no-repeat center;
+    background-size: 100%;
+
+}
+.tu:nth-child(3){
+
+    width: 33.33%;height: 0.9rem;
+    background: url("image/zao.png") no-repeat center;
+    background-size: 100%;
+}
+.tu:nth-child(4){
+
+    width: 33.33%;height: 0.9rem;
+    background: url("https://gw.alicdn.com/imgextra/i2/41/TB2DsmgmgfH8KJjy1zcXXcTzpXa_!!41-0-luban.jpg_200x200q85s150.jpg_.webp") no-repeat center;
+    background-size: 100%;
+}
+.tu:nth-child(5){
+
+    width: 33.33%;height: 0.9rem;
+    background: url("https://gw.alicdn.com/imgextra/i1/37/TB2i24nezgy_uJjSZLeXXaPlFXa_!!37-0-luban.jpg_200x200q85s150.jpg_.webp") no-repeat center;
+    background-size: 100%;
+}
+
+
+
