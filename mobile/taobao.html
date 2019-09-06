@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en" rem="375">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;margin: 0;
+            background: #f5f5f5;
+            font-size: 0.16rem;
+        }
+        nav{
+            width: 100%;height: 0.37rem;
+            margin: auto;
+            float: left;
+            background: #ff852a;
+            background-image: url("data:image/png;base64,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");
+            background-repeat: no-repeat;
+            background-size: 0.27rem 0.20rem;
+            background-position: 0.09rem center;
+        }
+        nav>div{
+            width: 3.24rem;height: 0.25rem;
+            background: #fa4e22;
+            color: white;
+            font-size: 0.13rem;
+            margin:auto;
+            border-radius: 0.06rem;
+            margin-left: 0.4rem;
+            margin-top: 0.05rem;
+        }
+        .top{
+            float: left;
+            margin-top: 0.03rem;
+            margin-left: 1rem;
+        }
+        .img{
+            width: 100%;height: 1.2rem;
+        }
+        .img img{
+            width: 100%;height: 100%;
+        }
+
+        .box{
+            width: 100%;height:1.6rem ;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            margin-top: 0.4rem;
+            background: white;
+            margin-bottom: 0.1rem;
+        }
+        .sbox{
+            width:0.7rem ;height: 0.62rem;
+        }
+        .sbox img{
+            width: 100%;height: 100%;
+        }
+        .sbox .zi{
+            width: 0.61rem;height: 0.1316rem;
+            color: #666;
+            font-size: 0.12rem;
+            text-align: center;
+        }
+
+        .one{
+            width: 100%;height: 0.6rem;
+
+            background: white;
+
+        }
+        .one>div{
+            float: left;
+        }
+        .toutiao{
+            width: 0.6rem;height: 0.6rem;
+            font-size: 0.22rem;
+            font-weight: 600;
+        }
+        .cen{
+            width: 2.32rem;height: 100%;
+           margin-top: 0.02rem;
+        }
+        .cen-top{
+            width: 2.32rem;height: 0.30rem;
+        }
+        .cen-bot{
+            width: 2.32rem;height: 0.30rem;
+        }
+        .cen-top>div{
+            float: left;
+            margin-left: 0.1rem;
+        }
+        .cen-bot>div{
+            float: left;
+            margin-left: 0.1rem;
+        }
+        .re{
+            border: 0.01rem solid #fa4e22;
+            border-radius: 0.05rem;
+            box-sizing: border-box;
+            padding: 0.01rem;
+            font-size: 0.12rem;
+        }
+        .img2{
+            width: 0.81rem;height: 0.6rem;
+            margin-right: 0;
+        }
+        .img2 img{
+            width: 100%;height: 100%;
+        }
+
+        .two{
+            width: 100%;height: 2.24rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+            margin-top: 0.1rem;
+        }
+        .two-list{
+            width: 1.86rem;height: 1.1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+            margin-left: 0.01rem;
+            background: white;
+
+        }
+        .two-list>div{
+            width: 50%;height: 1.1rem;
+
+        }
+        .two span{
+            font-size: 0.16rem;
+        }
+        .tao{
+            width: 0.92rem;
+            height: 20%;
+            font-size: 14px;color: #fa4e22;
+        }
+        .xiaotu{
+            width: 80%;
+            height: 80%;
+            margin-right: 0.1rem;
+        }
+        .xiaotu img{
+            width: 100%;height: 100%;
+        }
+        .tu{
+            width: 0.9rem;height: 78%;
+        }
+        .tu img{
+            width: 100%;
+            height: 100%;
+        }
+        .three{
+            width: 100%;
+            height: 0.29rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB1MGnKQFXXXXcAXpXXXXXXXXXX-1125-87.png?getAvatar=1_.webp");
+            background-size: auto 0.29rem;
+            margin-bottom: -0.1rem;
+            position: relative;
+            z-index: 2;
+
+        }
+        .four{
+            width: 100%;
+            height: 3.05rem;
+
+        }
+        .four>div{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .four-list{
+            width: 1.22rem;height: 1.5rem;
+            color: #1c1c1c;
+
+
+        }
+        .four .list3{
+            width: 1.2rem;height: 1.5rem;
+            color: #1c1c1c;
+
+        }
+        .four .list1{
+            background-image: url("http://img.alicdn.com/imgextra/i1/1266505025207716392/TB2OLLjiC0mpuFjSZPiXXbssVXa_!!0-dgshop.jpg");
+            background-size: auto 1.5rem;
+            background-repeat: no-repeat;
+        }
+        .four .list2{
+            background-image: url("https://gw.alicdn.com/imgextra/i1/45/TB2H9hxbb3XS1JjSZFFXXcvupXa_!!45-0-luban.jpg_200x200q85s150.jpg_.webp");
+            background-size: auto 1.5rem;
+            background-repeat: no-repeat;
+        }
+        .four .list3{
+            background-image: url("https://gw.alicdn.com/imgextra/i1/109/TB2Rl9Afoo09KJjSZFDXXb9npXa_!!109-0-luban.jpg_200x200q85s150.jpg_.webp");
+            background-size: 1.3rem 1.5rem;
+            background-repeat: no-repeat;
+        }
+        .four .list4{
+            background-image: url("https://gw.alicdn.com/imgextra/i2/41/TB2DsmgmgfH8KJjy1zcXXcTzpXa_!!41-0-luban.jpg_200x200q85s150.jpg_.webp");
+            background-size: auto 1.5rem;
+            background-repeat: no-repeat;
+        }
+
+        .four .list5{
+          background-image: url("https://gw.alicdn.com/imgextra/i2/195/TB2RaaUetbJ8KJjy1zjXXaqapXa_!!195-0-luban.jpg_200x200q85s150.jpg_.webp");
+            background-size: auto 1.5rem;
+            background-repeat: no-repeat;
+        }
+        .four .list3 img{
+            width: 0.3rem;height: 0.145rem;
+            margin-top: 1.35rem;
+        }
+        .five{
+            width: 100%;height: 0.92rem;
+            background: white;
+        }
+        .five-top{
+            width: 100%;height: 0.55rem;
+            display: flex;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+        .five-top span{
+            font-size: 0.14rem;
+            color: gray;
+        }
+        .five-bot{
+            width: 100%;height: 0.36rem;
+            float: left;
+        }
+        .five-bot>div{
+            float: left;
+        }
+        .six{
+            width: 100%;height: 0.29rem;
+            background-image: url("https://gw.alicdn.com/tfs/TB1R07AQVXXXXcEXpXXXXXXXXXX-1125-87.png?getAvatar=1_.webp");
+            background-size: auto 0.29rem;
+            margin-bottom: -0.1rem;
+            position: relative;
+            z-index: 1;
+        }
+        .seven{
+            width: 100%;
+            height: 1.25rem;
+            display: flex;
+            justify-content: space-around;
+            align-content: space-around;
+            background: white;
+        }
+        .seven>div{
+            height: 1.25rem;
+            width: 1.25rem;
+            color: white;
+
+        }
+        .seven>div:nth-of-type(1){
+
+
+            background: url("http://img.alicdn.com/i3/TB2SIVXiR0kpuFjSsziXXa.oVXa_!!2205092706-0-beehive-scenes.jpg_200x200q85s150.jpg_.webp");
+            font-size: 0.18rem;
+            font-weight: 400;
+            background-size: 2.2rem ,1.2rem;
+            background-repeat: no-repeat;
+        }
+        .seven>div:nth-of-type(1) span{
+            margin-top: 0.9rem;
+            margin-left: 0.05rem;
+        }
+        .seven>div:nth-of-type(2){
+            background-image: url("http://gw.alicdn.com/bao/uploaded/TB1tJ3ZPXXXXXXDXFXXXXXXXXXX-510-315.png_200x200q85s150.jpg_.webp");
+            background-size: 1.5rem ,0.8rem;
+            background-repeat: no-repeat;
+        }
+        .eight{
+            width: 100%;height: 2.5rem;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 0.1rem;
+
+        }
+        .eight>div{
+            width: 1.85rem;height: 1.23rem;
+            box-sizing: border-box;
+            padding: 0.05rem;
+            background: white;
+
+        }
+        .eight-b{
+            width: 100%;height: 0.66rem;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .eight-b>div{
+            width: 0.64rem;height: 0.64rem;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .b-1{
+            width: 100%;height: 100%;
+            background-image:url("https://gw.alicdn.com/imgextra/i1/52/TB2wyCKvBjTBKNjSZFuXXb0HFXa_!!52-2-luban.png_100x100q85s150.jpg_.webp") ;
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+        .b-2{
+            width: 100%;height: 100%;
+            background-image: url("https://gw.alicdn.com/imgextra/i2/46/TB29kkMwx1YBuNjy1zcXXbNcXXa_!!46-2-luban.png_100x100q85s150.jpg_.webp");
+
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+        .b-3{
+            width: 100%;height: 100%;
+            background-image: url("https://gw.alicdn.com/imgextra/i1/141/TB2fEZOx1uSBuNjy1XcXXcYjFXa_!!141-2-luban.png_100x100q85s150.jpg_.webp");
+
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+        .b-4{
+            width: 100%;height: 100%;
+            background-image: url("https://gw.alicdn.com/imgextra/i1/174/TB28kHBoiOYBuNjSsD4XXbSkFXa_!!174-2-luban.png_100x100q85s150.jpg_.webp");
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+        .b-5{
+            width: 100%;height: 100%;
+            background-image: url("https://gw.alicdn.com/imgextra/i3/22/TB2joCyvrZnBKNjSZFrXXaRLFXa_!!22-2-luban.png_100x100q85s150.jpg_.webp");
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+        .b-6{
+            width: 100%;height: 100%;
+            background-image: url("https://gw.alicdn.com/imgextra/i3/84/TB25pgRkAomBKNjSZFqXXXtqVXa_!!84-2-luban.png_100x100q85s150.jpg_.webp");
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+        .b-7{
+            width: 100%;height: 100%;
+            background-image: url("https://gw.alicdn.com/imgextra/i1/2/TB2uNyuHeGSBuNjSspbXXciipXa_!!2-2-luban.png_100x100q85s150.jpg_.webp");
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+        .b-8{
+            width: 100%;height: 100%;
+            background-image: url("https://gw.alicdn.com/imgextra/i2/64/TB2BRXsIf5TBuNjSspmXXaDRVXa_!!64-2-luban.png_100x100q85s150.jpg_.webp");
+            background-size: auto 0.6rem;
+            background-repeat: no-repeat;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+<nav>
+    <div>
+        <div class="top">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <span>寻找宝贝店铺</span>
+        </div>
+    </div>
+</nav>
+<div class="img">
+    <img src="https://gw.alicdn.com/imgextra/i2/99/O1CN01qQmXD91CbNlcfGf9h_!!99-0-lubanu.jpg" alt="">
+</div>
+<div class="box">
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png_.webp" alt=""></div>
+        <div class="zi"><span>天猫</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://img.alicdn.com/tfs/TB10UHQaNjaK1RjSZKzXXXVwXXa-183-144.png?getAvatar=1_.webp" alt=""></div>
+        <div class="zi"><span>聚划算</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB11rTqtj7nBKNjSZLeXXbxCFXa-183-144.png?getAvatar=1_.webp" alt=""></div>
+        <div class="zi"><span>天猫国际</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tps/TB1eXc7PFXXXXb4XpXXXXXXXXXX-183-144.png?getAvatar=1_.webp" alt=""></div>
+        <div class="zi"><span>外卖</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB1IKqDtpooBKNjSZFPXXXa2XXa-183-144.png_.webp" alt=""></div>
+        <div class="zi"><span>天猫超市</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB1o0FLtyMnBKNjSZFoXXbOSFXa-183-144.png_.webp" alt=""></div>
+        <div class="zi"><span>充值中心</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1_.webp" alt=""></div>
+        <div class="zi"><span>飞猪旅行</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB1BqystrZnBKNjSZFrXXaRLFXa-183-144.png?getAvatar=1_.webp" alt=""></div>
+        <div class="zi"><span>领金币</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB1CMf4tlnTBKNjSZPfXXbf1XXa-183-144.png?getAvatar=1_.webp" alt=""></div>
+        <div class="zi"><span>拍卖</span></div>
+    </div>
+    <div class="sbox">
+        <div class="im"><img src="https://gw.alicdn.com/tfs/TB18P98tyQnBKNjSZFmXXcApVXa-183-144.png?getAvatar=1_.webp" alt=""></div>
+        <div class="zi"><span>分类</span></div>
+    </div>
+</div>
+<div class="one">
+    <div class="toutiao">淘宝头条</div>
+    <div class="cen">
+        <div class="cen-top">
+            <div class="re">热门</div>
+            <div>糖酥饼真香警告</div>
+        </div>
+        <div class="cen-bot">
+            <div class="re">热门</div>
+            <div >这减肥菜开胃便宜</div>
+        </div>
+    </div>
+    <div class="img2">
+        <img src="https://gw.alicdn.com/imgextra/i1/139/O1CN01MTzeOx1Cthbr0f2fo_!!139-0-lubanu.jpg" alt="">
+    </div>
+</div>
+<div class="two">
+    <div class="two-list">
+        <div>
+            <div class="tao"><span>淘抢购</span></div>
+            <div class="xiaotu">
+                <img src="https://gw.alicdn.com/imgextra/O1CN01uTG3GO1D4h78TjCwJ_!!163-0-lubanu.jpg_100x100q85s150.jpg_.webp" alt="">
+            </div>
+        </div>
+        <div class="tu">
+            <img src="https://gw.alicdn.com/imgextra/O1CN0166xxi31C3wqzmE0t6_!!26-0-lubanu.jpg_200x200q85s150.jpg_.webp" alt="">
+        </div>
+    </div>
+    <div class="two-list">
+        <div>
+            <div class="tao"><span>有好货</span></div>
+            <div class="xiaotu">
+                <img src="https://gw.alicdn.com/imgextra/i2/11/O1CN015GHg311Bx4r6dj8cr_!!11-0-lubanu.jpg_100x100q85s150.jpg_.webp" alt="">
+            </div>
+        </div>
+        <div class="tu">
+            <img src="https://gw.alicdn.com/imgextra/i3/113/O1CN01h4uFqt1ChnIC6Tu1o_!!113-0-lubanu.jpg_200x200q85s150.jpg_.webp" alt="">
+        </div>
+    </div>
+    <div class="two-list">
+        <div>
+            <div class="tao"><span>哇哦视频</span></div>
+            <div class="xiaotu">
+                <img src="https://gw.alicdn.com/imgextra/i4/47/O1CN01DSHjVd1CDZAbz5kbI_!!47-0-lubanu.jpg_100x100q85s150.jpg_.webp" alt="">
+            </div>
+        </div>
+        <div class="tu">
+            <img src="https://gw.alicdn.com/imgextra/i1/24/O1CN01JWUsqD1C3209IEByE_!!24-0-lubanu.jpg_200x200q85s150.jpg_.webp" alt="">
+        </div>
+    </div>
+    <div class="two-list">
+        <div>
+            <div class="tao"><span>必买清单</span></div>
+            <div class="xiaotu">
+                <img src="https://gw.alicdn.com/imgextra/i3/107/TB2fj7_eZyYBuNkSnfoXXcWgVXa_!!107-0-luban.jpg_100x100q85s150.jpg_.webp" alt="">
+            </div>
+        </div>
+        <div class="tu">
+            <img src="https://gw.alicdn.com/imgextra/i2/86/TB28GLJnr9YBuNjy0FgXXcxcXXa_!!86-0-luban.jpg_200x200q85s150.jpg_.webp" alt="">
+        </div>
+    </div>
+</div>
+<div class="three"></div>
+<div class="four">
+    <div>
+        <div class="four-list list1" style="display: flex;flex-grow: 2;">
+            <div style="margin-top: 0.9rem; margin-left: 0.1rem; color: black">路转粉：<br>败家主播天天有，边看直播边剁手</div>
+        </div>
+        <div class="four-list list2">
+            <div style="margin-top: 0.9rem;margin-left: 0.1rem;color: white">主播优选</div>
+            <div style="margin-left: 0.1rem; color: white">复古印花外套</div>
+        </div>
+    </div>
+    <div>
+        <div class=" list3">
+            <img src="https://gw.alicdn.com/tfs/TB1mQYqQFXXXXXKapXXXXXXXXXX-90-44.png_.webp" alt="">
+        </div>
+        <div class="list3 list4">
+            <img src="https://gw.alicdn.com/tfs/TB1mQYqQFXXXXXKapXXXXXXXXXX-90-44.png_.webp" alt="">
+
+        </div>
+        <div class=" list3 list5">
+            <img src="https://gw.alicdn.com/tfs/TB1mQYqQFXXXXXKapXXXXXXXXXX-90-44.png_.webp" alt="">
+
+        </div>
+
+
+
+
+</div>
+</div>
+<div class="five">
+   <div class="five-top">
+       <div>
+           <div>美妆心得</div>
+           <span>卓越润肤乳</span>
+       </div>
+       <div>
+           <div>全球现场</div>
+           <span>牛皮单肩包</span>
+       </div>
+       <div>
+           <div>潮搭攻略</div>
+           <span>羊毛雪地鞋</span>
+       </div>
+   </div>
+    <div class="five-bot">
+        <div>
+            <div style="width: 0.49rem;height: 0.154rem;color: #FD1E57;font-size: 0.11rem;border: 1px
+solid #FD1E57;border-radius: 0.05rem">主播推荐</div>
+
+        </div>
+        <div style="font-size: 0.14rem ;margin-left: 0.1rem">品质好货，不能错过的亲民价</div>
+        <div style="float: right">抢福利 ></div>
+    </div>
+</div>
+<div class="six"></div>
+<div class="seven">
+    <div style="display: flex;flex-grow: 2;"><span >吃完必吮指的人气威化评测！</span></div>
+    <div style="color: #1c1c1c;"><span style="margin-left: 0.1rem;margin-top: 0.2rem;">Tonymoly</span></div>
+</div>
+<div class="eight">
+    <div>
+        <div class="eight-t">
+            <div style=" color: rgb(151, 61, 255);">进口优选 <img src="https://gw.alicdn.com/tfs/TB1ScuFSpXXXXbOXXXXXXXXXXXX-105-42.png_.webp" alt="" style="width: 0.35rem;height: 0.14rem"></div>
+            <div><span style="color: grey;font-size: 0.12rem;">正品保障15天售后无忧</span></div>
+        </div>
+        <div class="eight-b">
+            <div class="b-1"></div>
+            <div class="b-2"></div>
+        </div>
+    </div>
+    <div>
+        <div class="eight-t">
+            <div>全球品牌 <img src="" alt=""></div>
+            <div><span style="color: grey;font-size: 0.12rem;">3186个品牌资讯和上新</span></div>
+        </div>
+        <div class="eight-b">
+            <div class="b-3"></div>
+            <div class="b-4"></div>
+        </div>
+    </div>
+    <div>
+        <div class="eight-t">
+            <div>全球购 <img src="" alt=""></div>
+            <div><span style="color: grey;font-size: 0.12rem;">海淘尖货免费领用</span></div>
+        </div>
+        <div class="eight-b">
+            <div class="b-5"></div>
+            <div class="b-6"></div>
+        </div>
+    </div>
+    <div>
+        <div class="eight-t">
+            <div>海淘笔记 <img src="" alt=""></div>
+            <div><span style="color: grey;font-size: 0.12rem;">百万口碑好货真实评测</span></div>
+        </div>
+        <div class="eight-b">
+            <div class="b-7"></div>
+            <div class="b-8"></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
