@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>淘宝</title>
+	<style>
+		html {
+			font-size: 26.66667vw;
+		}
+
+		body,
+		h1,
+		h2,
+		h3,
+		p,
+		span {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		/*搜索框*/
+		.header {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: 0.40rem;
+			background-color: #FF852A;
+			position: relative;
+		}
+
+		.serch1 {
+			width: 0.3rem;
+			height: 0.3rem;
+			position: absolute;
+			top: 0.05rem;
+			left: 0.1rem;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAwCAYAAACmCaIKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABZNJREFUeNrUWg9k3Fccv+QqhHCEIxzh5rgZmUynjE246YybUjKdK5UZJZXpZDY3q1an0wmp1E1rtMYmlWqlQqqVSaVamVRnlWplEqlGp3Gxk0itVo1fv9/6/rrn9f35vrt3ueuHD3e/e+/97vve9+97ryEIgkiVMAlcA14mLkXqDSi8gTHgEPBO8D9uAvuBTYZ+qeBlzAMHgFlgs+W9m0LTj1uBxUAPnJC4pu9AYMa/wESthW/QqH0r8CYwaVGcK8APgBvCs2bgAxpDh7PATyxjdwDb6D+kgS30PSG0eQT8iz7/DbwLvA5crkTtvw34yEp9P7O0fwpMK7RsL/AnMqunQWWYAxaAHeWo/ZjDi45Iff+0tP8ZuA2YB44D14PqYhTY6SL8uMPgh4V+2aA+gZq0X5Zzi8GWs8yAcVX4fNhzMFoA/gG8TUS7fkKfQ7/QDnwH2CP5AxFR4BD5jn02m28B3mfM6JTQJ+dhhR4Ch2ks12jQRCZoQz8n1KFTmjUMconygHCyHlQgMOYSGU8hzOas/wMmbcIjo8A+WuEiaQMKvdMxrpv+yCBwB02gD+Gj5O1NKHCE5/BdD6EpzBx9JTB9lnctYrvGCh1SHDhCDkUHTEROAn+1jPWNR0f5u+X35POkyZCbT1icDtr7jEWl+6ldwhLPC55T1zaGpnXqOk9Rg6LGEdkER/QK7YcN7WYsRVI5jDGE36WK833ALkGtJ4DfEUO0WdTqGKl6hMbKWUxn2pO6/wA8z2yblGes3aCeaAatUvucIh/4hTxuGHvnNzGT63VY+UHZ4Z2i6kmF7cBr0qqfAb4OPECODWf9U6HKOwpMReoTcXnVHzJmbJHayloTl2w3U4Mc3mXlJ+R6PgY8QnZvAubY7wu1tIwU2XFc8duXQj3QDcxb3nWZNIsD3CpbITlWLW1vmXZxbKVpMUwTFZ52lhEBIvTdhuEqefs5XZKDldTbwC/IlnVe+pwiwcHvJUX7fUIEqAe0mDI8dFrHyaFd1LTZCtwhPSvR1taZOhbcKrxo3x8BD2l+V9X9WHPvprhbj4Kztq5lqjK1aalNvoY7Ni7eftW1sFF53abIq4moq/D36BRGxMorKvzGFscOzYoMcEH6vkzRglsSt1valGjSOXBZiMeuNr9TYTu5CqovH3E+rSi9OTZ/30Xt0bYPajKwzUYX1Q2LwDng/jLGeOIi/FfATunZbSmhmcUAYmDMg+BTxLxwnNZDJumCx1zht2v25C9ImvGGaaYVzrIc3NL4jm7HcdY4wqcM+3RnpcPNqMVx+cBvmud9juOs2IRP0CWDVs0K3HWI92uehL+heb6N0m0uSo2WMDRhCEUnXwod9rBWKbCOmDH83usw1rJOeHRM4wYbXlFsRZfIrnVA7cmUIXCMhEJnOma5M5BzcKrKlUevOUpqpMOPipXekMxAhRGyzbSD8Fg4naBDSU4S1sNOiBQHlNcsycG6YiMz5FHHQuSfMguYSUPfOea+fZecFU0zOg0Ysq0EHVZUC6t08wPfNWJox6ks2xoFZzRJ59wRS6w+Zqn9D1Uho8N64Wvga8DT9Oyqoh3eK/iYEXnuPR+TVOQOc+ZPMHP2godVXqcT4V3COYC82xxqw5Bwz4dzXD4YntKec7jakXQoWj6kgw4uiiRsnk5+uYVWs3Q8PcaQIx1eRcOsrJ+KlhaDqmBo21OGyobXxxLCgceSUH5yyt8chdIbhkwRo1PBEqXCSPU5fhD37ZPUOavZzHyTEcqqsuMCLApZ5gJNwiMhs8ww9gXCiX7vRZhWqFK3wmZGa3hTstNTpJiXT5pUSc552q4+Lpy5fV/D7aaMhzFQprci8uVnxqwP1viO7HgFq33J5Dwbqnjl3BeayIl1CJspHfQ8JeTyS5Rn4AbLdSp9jXdwnwkwAGXl2KVI+BEMAAAAAElFTkSuQmCC);
+			float: left;
+		}
+
+		.serch2 {
+			width: 3.2rem;
+			height: 0.3rem;
+			background-color: #FF4E22;
+			border-radius: 0.07rem;
+			box-sizing: border-box;
+			top: 0.05rem;
+			left: 0.5rem;
+			position: absolute;
+		}
+
+		.serch2_1 {
+			width: 0.3rem;
+			height: 0.3rem;
+			background-image: url();
+			background-size: 0.3rem 0.3rem;
+			margin-left: .8rem;
+			float: left;
+		}
+
+		.serch2_2 {
+			font-size: 0.16rem;
+			text-align: center;
+			line-height: 0.3rem;
+			float: left;
+			margin-left: 0.1rem;
+			color: white;
+		}
+
+		/*	轮播图	*/
+		.top_img {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: 1.03rem;
+			background-size: 100%;
+			background-image: url(https://github.com/ZhangZe-only/1907_9_6_work/blob/master/0.png);
+		}
+
+		/*导航栏*/
+		.nav_out {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: 1.32rem;
+			display: flex;
+			/* border: 0.01rem solid red; */
+			flex-wrap: wrap;
+		}
+
+		.nav {
+			width: 0.685rem;
+			height: 0.6rem;
+			margin-left: 0.05rem;
+			margin-top: 0.05rem;
+
+
+		}
+
+		.nav img {
+			width: 0.5rem;
+			height: 0.4rem;
+			display: block;
+			margin-left: 0.1rem;
+			margin-bottom: 0.07rem;
+		}
+
+		.nav_text {
+
+			line-height: 0.1rem;
+			font-size: 0.1rem;
+			text-align: center;
+		}
+
+		/* 热门 */
+		.headline {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: 0.755rem;
+		}
+
+		.headline_img1 {
+			width: 0.755rem;
+			height: 0.755rem;
+			background-image: url('1.png');
+			background-size: 0.75rem auto;
+			float: left;
+
+		}
+
+		.headline_img2 {
+			width: 0.755rem;
+			height: 0.755rem;
+			background-image: url('https://gw.alicdn.com/mt/TB1qv5geRWD3KVjSZFsXXcqkpXa-640-398.jpg');
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+			float: right;
+		}
+
+		.headline_text {
+			width: 1.5rem;
+			height: 0.755rem;
+			float: left;
+		}
+
+		.headline_text1 {
+			clear: both;
+			margin-top: 0.1rem;
+			margin-bottom: 0.3rem;
+		}
+
+		.headline_text1 span {
+			font-size: 0.1rem;
+			float: left;
+			border: 1px solid red;
+			color: red;
+		}
+
+		.headline_text1 h1 {
+			font-size: 0.1rem;
+			float: left;
+		}
+
+		/* 淘抢购 */
+		.buy {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: 2.8rem;
+			/* border: 1px solid #FF4E22; */
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.buy_con {
+			width: 0.9rem;
+			height: 1.37rem;
+			/* border: 1px solid #FF4E22; */
+		}
+
+		.buy_con span {
+			font-size: 0.1rem;
+			float: left;
+		}
+
+		.buy_img {
+			float: left;
+			width: 0.9rem;
+			/* height: 1.37rem */
+		}
+
+		/* 淘宝直播 */
+
+
+		.living_out {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: 4.82rem;
+			position: relative;
+			border: 1px solid #FF852A;
+		}
+
+		.living {
+			width: 100%;
+			height: 0.362667rem;
+			position: absolute;
+			left: 0;
+			top: -0.1813rem;
+		}
+
+		.living div {
+			width: 1.3rem;
+			height: 100%;
+			font-size: 0.16rem;
+			color: white;
+			background-color: #FF852A;
+			border-radius: 0 .3rem .3rem 0;
+			float: left;
+		}
+
+		.living_con {}
+
+		.living_img {}
+
+		.living_con h1 {
+			font-size: 0.1rem;
+		}
+
+		.living_con h2 {
+			font-size: 0.1rem;
+		}
+
+		.living_png {}
+
+		/* 主播福利 */
+		.recommend {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: 0.45rem;
+			border: 1px solid #FF852A;
+		}
+
+		.recommend_1 {
+			font-size: 0.1rem;
+			float: left;
+		}
+
+		.recommend_2 {
+			font-size: 0.1rem;
+			float: left;
+		}
+
+		.recommend_3 {
+			font-size: 0.1rem;
+			float: right;
+		}
+
+
+		.bottom_out {
+			box-sizing: border-box;
+			width: 3.75rem;
+			height: .8rem;
+			background-color: #4e525e;
+			margin-top: 0.2rem;
+			padding: 0.2rem .09rem .2rem;
+		}
+
+		.bottom1 {
+			width: 3.75rem;
+			height: 0.35rem;
+		}
+
+		.bottom1 p {
+			font-size: 0.1rem;
+			float: left;
+			text-align: center;
+			margin: auto 0.2rem;
+			padding: 0.03rem 0.1rem;
+			color: #c3c6ca;
+			border: 1px solid #42454d;
+			background-color: #555965;
+		}
+
+		.bottom2 {
+			width: 100%;
+			height: 0.2rem;
+		}
+
+		.bottom2_img {
+			width: 0.2rem;
+			height: 0.2rem;
+			float: left;
+			margin-left: 1rem;
+		}
+
+		.bottom2_1 {
+			font-size: 0.14rem;
+			float: left;
+			text-align: center;
+			margin: auto 0.2rem;
+		}
+	</style>
+</head>
+
+<body>
+	<!--搜索框-->
+	<div class="header">
+		<div class="serch1"> </div>
+		<div class="serch2">
+			<div class="serch2_1"></div>
+			<div class="serch2_2">寻找宝贝店铺</div>
+		</div>
+	</div>
+
+	<!--轮播图-->
+	<div class="top_img">
+		<div></div>
+	</div>
+
+	<!--导航栏-->
+	<div class="nav_out">
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png" />
+			<div class="nav_text">天猫</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://img.alicdn.com/tfs/TB10UHQaNjaK1RjSZKzXXXVwXXa-183-144.png?getAvatar=1" />
+			<div class="nav_text">聚划算</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB11rTqtj7nBKNjSZLeXXbxCFXa-183-144.png?getAvatar=1" />
+			<div class="nav_text">天猫国际</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tps/TB1eXc7PFXXXXb4XpXXXXXXXXXX-183-144.png?getAvatar=1" />
+			<div class="nav_text">外卖</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB1IKqDtpooBKNjSZFPXXXa2XXa-183-144.png" />
+			<div class="nav_text">天猫超市</div>
+		</div>
+
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB1o0FLtyMnBKNjSZFoXXbOSFXa-183-144.png" />
+			<div class="nav_text">充值中心</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1" />
+			<div class="nav_text">飞猪旅行</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB1BqystrZnBKNjSZFrXXaRLFXa-183-144.png?getAvatar=1" />
+			<div class="nav_text">领金币</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB1CMf4tlnTBKNjSZPfXXbf1XXa-183-144.png?getAvatar=1" />
+			<div class="nav_text">拍卖</div>
+		</div>
+		<div class="nav">
+			<img class="nav_img" src="https://gw.alicdn.com/tfs/TB18P98tyQnBKNjSZFmXXcApVXa-183-144.png?getAvatar=1" />
+			<div class="nav_text">分类</div>
+		</div>
+	</div>
+
+	<!--淘宝头条-->
+	<div class="headline">
+		<div class="headline_img1"> </div>
+		<div class="headline_text">
+			<div class="headline_text1"><span>热门</span>
+				<h1>糖酥饼真香警告|食税</h1>
+			</div>
+			<div class="headline_text1"><span>热门</span>
+				<h1>糖酥饼真香警告|食税</h1>
+			</div>
+		</div>
+		<div class="headline_img2"> </div>
+	</div>
+	<!--淘抢购  有好货  哇哦视频  必买清单-->
+	<div class="buy">
+		<div class="buy_con">
+			<!-- <span>淘抢购</span> -->
+			<img class="buy_img" src="3.png" />
+		</div>
+
+		<div class="buy_con">
+			<img class="buy_img" src="https://github.com/ZhangZe-only/1907_9_6_work/blob/master/4.png"  style="margin-top: 0.4rem"/>
+		</div>
+
+		<div class="buy_con">
+			<!-- <span>有好货</span> -->
+			<img class="buy_img" src="https://github.com/ZhangZe-only/1907_9_6_work/blob/master/5.png" />
+		</div>
+		<div class="buy_con">
+			<img class="buy_img" src="https://github.com/ZhangZe-only/1907_9_6_work/blob/master/6.png" style="margin-top: 0.4rem"/>
+		</div>
+		<div class="buy_con">
+			<!--<span>哇哦视频</span>-->
+			<img class="buy_img" src="https://github.com/ZhangZe-only/1907_9_6_work/blob/master/7.png" />
+		</div>
+		<div class="buy_con">
+			<img class="buy_img" src="https://github.com/ZhangZe-only/1907_9_6_work/blob/master/8.png" />
+		</div>
+		<div class="buy_con">
+			<!-- <span>必买清单</span> -->
+			<img class="buy_img" src="https://github.com/ZhangZe-only/1907_9_6_work/blob/master/9.png" />
+		</div>
+		<div class="buy_con">
+			<img class="buy_img" src="https://github.com/ZhangZe-only/1907_9_6_work/blob/master/10.png" />
+		</div>
+	</div>
+
+
+
+
+	<!--淘宝直播
+	<div class="living_out">-->
+
+	<!--淘宝直播
+		<div class="living">
+			<div>	</div>
+		</div>
+
+		<div class="living_con">
+			<div class="living_img"></div>
+			<h1>"路转粉" 每一秒都在发生</h1>
+			<h2>败家主播天天有，边看直播边剁手</h2>
+			<div class="living_png"></div>
+		</div>
+		
+		<div class="living_con">
+			<div class="living_img"></div>
+			<h1>"路转粉" 每一秒都在发生</h1>
+			<h2>败家主播天天有，边看直播边剁手</h2>
+			<div class="living_png"></div>
+		</div>
+		<div class="living_con">
+			<div class="living_img"></div>
+			<h1>主播优选</h1>
+			<h2>男士保暖衬衫</h2>
+			<div class="living_png"></div>
+		</div>
+		<div class="living_con">
+			<div class="living_img"></div>
+			<h1>主播优选</h1>
+			<h2>男士保暖衬衫</h2>
+			<div class="living_png"></div>
+		</div>
+		<div class="living_con">
+			<div class="living_img"></div>
+			<h1>主播优选</h1>
+			<h2>男士保暖衬衫</h2>
+			<div class="living_png"></div>
+		</div>
+		<div class="living_con">
+			<div class="living_img"></div>
+			<h1>主播优选</h1>
+			<h2>男士保暖衬衫</h2>
+			<div class="living_png"></div>
+		</div>
+	</div>-->
+
+	<!--主播推荐 
+	<div class="recommend">
+		<div class="recommend_1">主播推荐</div>
+		<div class="recommend_2">品质好货，不能错过的亲民价</div>
+		<div class="recommend_3">抢福利<span>></span></div>
+	</div>-->
+
+
+
+
+	<!--买遍全球
+	<div class="word">
+		<div class="word_top">买遍全球</div>
+	</div>-->
+
+	<!--买遍全球
+	<div class="word_con_out">
+		<div class=" living_con">
+			<div class=""></div>
+			<h1>吃完必吮指的人气威化评测</h1>
+		</div>
+		
+		
+	</div>-->
+	<!--司法拍卖 桃香甜  更多服务
+	<div class="auction">
+			<div class="auction1"><span>司法拍卖</span><span>桃香甜</span></div>
+			<div class="auction2">更多服务</div>
+			<span>></span>
+	</div>-->
+	<!--每日好店
+	<div class="ereygood">
+			<div class="ereygood_top"></div>
+	</div>-->
+
+	<!--每日好店
+	<div class="ereygood_con">
+
+	</div>-->
+
+	<!--猜你喜欢
+	<div class="like_top">
+		<div class="">
+			<div class="ereygood_top1"></div>
+			<div class="ereygood_top2">猜你喜欢</div>
+		</div>
+	</div>-->
+
+	<!--猜你喜欢
+	<div class="ereygood_con_out">
+		<div class="ereygood_con">		
+			<img class="ereygood_con_img" src=""/>
+			<div class="ereygood_con_text">七夕礼品欧式可悬挂彩色玻璃五角星铁艺烛台</div>
+			<div class="ereygood_con_bottom"><h2>￥38</h2> <p>23人付款</p>  </div>
+		</div>
+		<div class="ereygood_con">
+			<div class="ereygood_con_img"></div>
+			<div class="ereygood_con_text"></div>
+			<div class="ereygood_con_bottom"></div>
+		</div>
+		
+	</div>
+	
+-->
+
+
+
+
+	<!--底部-->
+	<div class="bottom_out">
+		<div class="bottom1">
+			<p>登录</p>
+			<p>注册</p>
+			<p>手淘App</p>
+			<p>用户反馈</p>
+		</div>
+		<div class="bottom2">
+			<img class="bottom2_img"
+				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAMAAABgOjJdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAO1QTFRFhomSb3J8XGBrdnqDgYWNlJefV1tmfoGKU1diT1NfgISNgoWOYmZwio2Vi4+Wc3eAkJObZGhzUlZiaGt2U1djfYCKZGdyhYiQeHyFio6VgYWOVVllbHB6XWFsY2ZxaWx3jZCYXmFsfYCJcnZ/UVVham54V1tng4aPb3N8WV1pX2JtZWl0YWVvVlpmiYyUWVxohomRd3uEdHiBeX2GZ2t1hIeQVFhkf4OMbnJ8fYGKdnqEb3N9kJScY2dycnaAjpKZdHeBjpKajI+Yc3eBhYiRf4KLXmFtio6Wi4+XjZCZkJSbkZScjI+XlJifTlJe+rAZcwAAAZBJREFUeNp0lOeWgjAQhSdUBQRRbFjX7tpW3XUt23tL3v9xNigJIHh/zRk+5iR3ZgIkULWmwgv+A7VWDWWBR/nSt2gLUzIVbLH1lo8RRW1wEfqxPtCKUaKTMUhURuUhTIi6Q07l6LuAEFdpEld6tWNEx00CKKJ3jsR1xSHJcj4bB+LmkpxT49Yj8mqQUVBBciUk8ITepESJ+5AqY1+uwny5IjDPcADoN0BIwjLOsjKZOewtbi/9fvi338a44CetIai2H/cokPLj9tfEj2wVzD4rIWMlfpu+CXc5Pw4qh5X7AUw4gZIswUENGT8lAN1fMBVeAxIIxYR3Nin0imOe52emdxkyP8aY+0S9Y2d63cNoxvACRTaeI70slst+cjYCAnXmuuS1RKKmy1hKBX0hzaC3KOsxsmz2Ir2NzMcEbVCo+cf5oDOWOzNAucpxxoglnZlT1+KzXk4kymKwL4ttN+73dhHeuWV85zLL073Vw3v7MdDuE3a/JRrCmqwFQ2yV8gmvg/d+aPCMH0GLvB//AgwAo1MTpxsaxVoAAAAASUVORK5CYII=" />
+			<div class="bottom2_1">2018 &nbsp; 浙B2-20080224服务中心</div>
+		</div>
+	</div>
+</body>
+
+</html>
